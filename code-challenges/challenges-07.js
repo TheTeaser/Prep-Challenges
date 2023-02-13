@@ -22,8 +22,18 @@
 
 const objLat = (obj) => {
     // write your code here
+    firstName= "Rakan";
+    lastName= 'Al-Madani';
+    age= 25;
+    hobby= 'Skydiving';
     
+    return `my name is ${this.firstName} ${this.lastName} I am ${this.age} YO, and I love ${this.hobby}.`
+    //can't figure this one out.
 };
+
+    
+        
+    
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -86,8 +96,17 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    // write your code here
-};
+    // // write your code here
+    // return arr.filter(cvs => cvs.yearsOfExprience>1)
+    
+        return arr.filter(cvs => cvs.yearsOfExperience > 1)
+          .map(cvs => {
+            const fullName = cvs.lastName ? `${cvs.firstName} ${cvs.lastName}` : cvs.firstName;
+            return { fullName, tech: cvs.tech };
+          });
+      };
+      
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -112,7 +131,9 @@ const cvFormatter = (arr) => {
 //  1- rejectedApplicants are applications that has both the names empty or null and whoever have one year or less of Experience
 
 const applicationsStatics = (arr) => {
-    // write your code here
+    // write your code here 
+    //What is this!
+
 };
 // -------------------------------------------------------------------------------------------------------
 
