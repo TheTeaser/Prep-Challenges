@@ -260,6 +260,14 @@ let data = {
 
 const classesAvg = (data) => {
     // write your code here
+    data.grades.forEach((grade) => {
+        grade.classes.forEach((classObj) => {
+          const sum = classObj.classScores.reduce((acc, score) => acc + score, 0);
+          const avg = Math.floor(sum / classObj.classScores.length);
+          classObj.avg = avg;
+        });
+      });
+      return data
 };
 // -------------------------------------------------------------------------------------------------------
 
