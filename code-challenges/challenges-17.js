@@ -42,10 +42,10 @@ const recursionPattern = (int1, int2) => {
 
 const filterLinks = (str) => {
     // write your code here
-    let regexMethod= /href="([^"]*\.com|[^"]*\.org|[^"]*\.net)"/;
+    let regexMethod= /href="(https?:\/\/)?([^"]*)"/;
     let result= str.match(regexMethod);
    
-        return result
+        return result?result[2]:null
     
    //Fix this excercise 
 }
